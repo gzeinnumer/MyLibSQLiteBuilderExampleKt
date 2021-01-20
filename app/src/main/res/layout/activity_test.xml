@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_low">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                style="@style/MyAppbarLayout"
+                android:background="@color/white">
+
+                <com.google.android.material.appbar.MaterialToolbar style="@style/MyMaterialToolbar">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_toolbar"
+                            style="@style/MyCostumToolbarTitle"
+                            android:text="Simple SQLite" />
+
+                    </LinearLayout>
+                </com.google.android.material.appbar.MaterialToolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <View style="@style/MyDivider.Toolbar" />
+
+            <LinearLayout
+                style="@style/MyParentType"
+                android:layout_marginTop="@dimen/def_margin"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_delete_db"
+                    style="@style/MyButtonContained"
+                    android:backgroundTint="@color/red_500"
+                    android:text="Delete Database" />
+
+                <Button
+                    android:id="@+id/btn_back_up_db"
+                    style="@style/MyButtonContained"
+                    android:backgroundTint="@color/red_500"
+                    android:text="Back Up Database" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_db_root"
+                        style="@style/MyButtonContained"
+                        android:backgroundTint="@color/red_500"
+                        android:text="Database(Root)" />
+
+                    <Button
+                        android:id="@+id/btn_db_external"
+                        style="@style/MyButtonContained"
+                        android:backgroundTint="@color/red_500"
+                        android:text="Database(External)" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
