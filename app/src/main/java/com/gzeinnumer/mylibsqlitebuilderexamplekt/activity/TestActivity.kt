@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.gzeinnumer.mylibsqlitebuilderexamplekt.DBInstance
 import com.gzeinnumer.mylibsqlitebuilderexamplekt.databinding.ActivityTestBinding
+import com.gzeinnumer.mylibsqlitebuilderexamplekt.table.Table1
 
 class TestActivity : AppCompatActivity() {
 
@@ -20,6 +21,11 @@ class TestActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val database: SQLiteDatabase = DBInstance.getDataBase(applicationContext)
+        if(database!=null){
+            Log.d(TAG, "onCre_ate: db loaded")
+        } else{
+            Log.d(TAG, "onCre_ate: db null loaded")
+        }
         val dbInstance = DBInstance()
 
         binding.btnDeleteDb.setOnClickListener {

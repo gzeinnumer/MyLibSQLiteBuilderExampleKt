@@ -2,7 +2,7 @@ package com.gzeinnumer.mylibsqlitebuilderexamplekt.table
 
 import com.gzeinnumer.mylibsqlitebuilder.struct.CreateTableQuery
 
-@CreateTableQuery
+@CreateTableQuery(query = "CREATE TABLE table1 (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, rating REAL, descr TEXT, flag_active INTEGER, created_at TEXT)")
 class Table1 {
     private val id = 0
     private val name: String? = null
