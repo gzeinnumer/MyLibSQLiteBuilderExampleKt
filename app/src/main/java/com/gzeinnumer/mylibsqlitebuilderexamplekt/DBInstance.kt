@@ -23,8 +23,9 @@ class DBInstance : SQLiteBuilder() {
             sqLiteDatabase =
                 builder(DBInstance::class.java, context)
                     .setDatabaseName(DB_NAME)
-                    .setDatabaseVersion(1) //                .putDatabaseToExternal(DB_PATH_BC)
-                    .loadDatabaseFromExternal(DB_PATH_EXTERNAL)
+                    .setDatabaseVersion(1)
+//                    .putDatabaseToExternal(DB_PATH_BC)
+//                    .loadDatabaseFromExternal(DB_PATH_EXTERNAL)
                     .build()
             return sqLiteDatabase
         }
