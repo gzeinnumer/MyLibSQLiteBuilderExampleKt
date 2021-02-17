@@ -1,6 +1,6 @@
 package com.gzeinnumer.mylibsqlitebuilderexamplekt.table
 
-import com.gzeinnumer.mylibsqlitebuilder.struct.CreateTableQuery
+import com.gzeinnumer.sb.struct.CreateTableQuery
 
 @CreateTableQuery(query = "CREATE TABLE table2 (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, id_table1 INTEGER)")
 class Table2 {

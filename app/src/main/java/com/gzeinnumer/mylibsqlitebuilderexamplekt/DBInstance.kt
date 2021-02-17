@@ -3,11 +3,11 @@ package com.gzeinnumer.mylibsqlitebuilderexamplekt
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.os.Environment
-import com.gzeinnumer.mylibsqlitebuilder.SQLiteBuilder
-import com.gzeinnumer.mylibsqlitebuilder.struct.SQLiteDatabaseEntity
 import com.gzeinnumer.mylibsqlitebuilderexamplekt.table.Table1
 import com.gzeinnumer.mylibsqlitebuilderexamplekt.table.Table2
 import com.gzeinnumer.mylibsqlitebuilderexamplekt.table.Table3
+import com.gzeinnumer.sb.SQLiteBuilder
+import com.gzeinnumer.sb.struct.SQLiteDatabaseEntity
 
 @SQLiteDatabaseEntity(entities = [Table1::class, Table2::class, Table3::class])
 class DBInstance : SQLiteBuilder() {
